@@ -1,21 +1,21 @@
 #!/usr/bin/python
 
-;----------------------------------------------------------------------------------------------------------------------
-; This script reads in rainfall from a time series netCDF file of climate model output and determines the northernmost
-; latitudes reached each month/year by the West African monsoon.
-;
-; To define the northern limit of the West African Monsoon (WAM), we use a threshold of 2 mm/day,
-; adapted from 60 mm/month, averaged over the zonal region 15°W–20°E (Pausata et al., 2016).
-; With monthly model output, we calculate the northernmost latitude that exceeds
-; 2 mm/day for each month over the zonal region. We find the northernmost latitude for each year,
-; taken as the maximum of the year’s monthly values, and create a distribution of northernmost latitudes
-; by year for each simulation. The median of this distribution is calculated and printed at the end.
-;
-; Author: Alex Thompson
-; Date: 8/8/2022
-;
-; Example shown here is for 100 years of monthly files from a case named "b.e12.B1850C5.f19_g16.iPI.01"
-;----------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------
+# This script reads in rainfall from a time series netCDF file of climate model output and determines the northernmost
+# latitudes reached each month/year by the West African monsoon.
+#
+# To define the northern limit of the West African Monsoon (WAM), we use a threshold of 2 mm/day,
+# adapted from 60 mm/month, averaged over the zonal region 15°W–20°E (Pausata et al., 2016).
+# With monthly model output, we calculate the northernmost latitude that exceeds
+# 2 mm/day for each month over the zonal region. We find the northernmost latitude for each year,
+# taken as the maximum of the year’s monthly values, and create a distribution of northernmost latitudes
+# by year for each simulation. The median of this distribution is calculated and printed at the end.
+#
+# Author: Alex Thompson
+# Date: 8/8/2022
+#
+# Example shown here is for 100 years of monthly files from a case named "b.e12.B1850C5.f19_g16.iPI.01"
+#----------------------------------------------------------------------------------------------------------------------
 
 #*******************************************
 # Import packages
