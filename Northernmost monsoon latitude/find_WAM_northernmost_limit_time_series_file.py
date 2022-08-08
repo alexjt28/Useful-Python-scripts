@@ -161,3 +161,12 @@ print(northlat_vals)
 
 MEDIAN_MAXLAT = np.median(northlat_vals)
 print("Median value = %d" %(MEDIAN_MAXLAT))
+
+#**********************************************
+# Print northernmost lat values to txt file
+#**********************************************
+
+# This prints a column with the output values
+with open("output.txt",'w') as output:
+ for txt in range(0,len(northlat_vals)):
+  print(northlat_vals[txt], file=output)
